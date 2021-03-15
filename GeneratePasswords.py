@@ -6,7 +6,7 @@ import sys
 
 def GetPWDS(tokens, l, st):
     for i in l:
-        for alt in tokens[i]:
+        for alt in set(tokens[i]):
             if alt.startswith("^"):
                 if (len(st) > 0):
                     break

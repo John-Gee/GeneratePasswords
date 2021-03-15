@@ -176,3 +176,42 @@ Pass^12.
 Pass$1234!
 Pass$1234.
 ```
+
+
+# Deduplication
+
+Alternative tokens are deduplicated, so this:
+
+```
+Password Password
+123
+!
+```
+
+is equivalent to
+
+
+```
+Password
+123
+!
+```
+
+but separate tokens are not deduplicated in case you wish to repeat it multiple time, so this:
+```
+Password
+Password
+123
+```
+
+gives this:
+
+
+```
+PasswordPassword123
+Password123Password
+PasswordPassword123
+Password123Password
+123PasswordPassword
+123PasswordPassword
+```
