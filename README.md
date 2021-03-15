@@ -1,4 +1,4 @@
-# WHAT
+# What
 
 This tool will generate potential passwords from a list of tokens.
 Tokens in this case are words you believe to be in some location of the password.
