@@ -152,7 +152,7 @@ Pass1234.
 
 which will be much faster to try.
 
-Because of those 2 keywords though, if you have them in the beginning of your tokens you will need to protect those with **\**, ie:
+Because of those 2 keywords though, if you have them in the beginning of your tokens you will need to protect those with **\\**, ie:
 
 ```
 ^Password ^Pass
