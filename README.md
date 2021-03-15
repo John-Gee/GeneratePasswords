@@ -40,7 +40,7 @@ You may not be sure which exact token is in the password so you can supply alter
 
 ```
 Password Pass
-123 123 1234
+123 12 1234
 ! .
 ```
 
@@ -49,27 +49,27 @@ which will then give:
 ```
 Password123!
 Password123.
-Password123!
-Password123.
+Password12!
+Password12.
 Password1234!
 Password1234.
 Password!123
-Password!123
+Password!12
 Password!1234
 Password.123
-Password.123
+Password.12
 Password.1234
 Pass123!
 Pass123.
-Pass123!
-Pass123.
+Pass12!
+Pass12.
 Pass1234!
 Pass1234.
 Pass!123
-Pass!123
+Pass!12
 Pass!1234
 Pass.123
-Pass.123
+Pass.12
 Pass.1234
 123Password!
 123Password.
@@ -79,14 +79,14 @@ Pass.1234
 123!Pass
 123.Password
 123.Pass
-123Password!
-123Password.
-123Pass!
-123Pass.
-123!Password
-123!Pass
-123.Password
-123.Pass
+12Password!
+12Password.
+12Pass!
+12Pass.
+12!Password
+12!Pass
+12.Password
+12.Pass
 1234Password!
 1234Password.
 1234Pass!
@@ -96,27 +96,27 @@ Pass.1234
 1234.Password
 1234.Pass
 !Password123
-!Password123
+!Password12
 !Password1234
 !Pass123
-!Pass123
+!Pass12
 !Pass1234
 !123Password
 !123Pass
-!123Password
-!123Pass
+!12Password
+!12Pass
 !1234Password
 !1234Pass
 .Password123
-.Password123
+.Password12
 .Password1234
 .Pass123
-.Pass123
+.Pass12
 .Pass1234
 .123Password
 .123Pass
-.123Password
-.123Pass
+.12Password
+.12Pass
 .1234Password
 .1234Pass
 ```
@@ -129,7 +129,7 @@ You can reduce the potential passwords by forcing tokens to be only at the begin
 
 ```
 ^Password ^Pass
-123 123 1234
+123 12 1234
 $! $.
 ```
 
@@ -156,7 +156,7 @@ Because of those 2 keywords though, if you have them in the beginning of your to
 
 ```
 ^Password ^Pass
-\$123 \$123 \$1234
+\$123 \^12 \$1234
 $! $.
 ```
 
@@ -165,14 +165,14 @@ will give
 ```
 Password$123!
 Password$123.
-Password$123!
-Password$123.
+Password^12!
+Password^12.
 Password$1234!
 Password$1234.
 Pass$123!
 Pass$123.
-Pass$123!
-Pass$123.
+Pass^12!
+Pass^12.
 Pass$1234!
 Pass$1234.
 ```
